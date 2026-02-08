@@ -23,3 +23,6 @@ class Solution:
         #      if value > x:
         #         return key
         
+if __name__ == "__main__":
+    print(Solution().majorityElement([2,2,1,1,1,2,2]))
+        

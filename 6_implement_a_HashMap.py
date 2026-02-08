@@ -1,5 +1,4 @@
 class MyHashMap:
-
     def __init__(self):
         self.items = [-1] * 1000001 
 
@@ -16,8 +15,13 @@ class MyHashMap:
 """
 Linked list implementation
 
-class MyHashMap:
+class ListNode:
+    def __init__(self, key=-1, val=-1):
+        self.key = key
+        self.val = val
+        self.next = None
 
+class MyHashMap:
     def __init__(self):
         self.map = [ListNode() for _ in range(1000)]
 

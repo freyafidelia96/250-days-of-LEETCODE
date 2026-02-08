@@ -23,4 +23,34 @@ class Solution:
             res[tuple(count)].append(s)
         return list(res.values())
         
-"""   
+"""  
+
+if __name__ == "__main__":
+    solution = Solution()
+    
+    # Test 1: Basic test case
+    print(solution.groupAnagrams(["eat", "tea", "tan", "ate", "nat", "bat"]))
+    # Expected: [["eat", "tea", "ate"], ["tan", "nat"], ["bat"]]
+    
+    # Test 2: Empty input
+    print(solution.groupAnagrams([]))
+    # Expected: []
+    
+    # Test 3: Single word
+    print(solution.groupAnagrams(["hello"]))
+    # Expected: [["hello"]]
+    
+    # Test 4: All anagrams
+    print(solution.groupAnagrams(["abc", "bca", "cab"]))
+    # Expected: [["abc", "bca", "cab"]]
+    
+    # res = defaultdict(list)
+    
+    # for word in ["eat", "tea", "tan", "ate", "nat", "bat"]:
+    #   count = [0] * 26
+    #   for chr in word:
+    #     count[ord(chr) - ord('a')] += 1
+      
+    #   res[tuple(count)].append(word)
+    # print(list(res.values()))
+    

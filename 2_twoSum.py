@@ -8,5 +8,7 @@ class Solution:
             if x in checked:
                 return [checked[x], i]
             
-            checked[nums[i]] = i 
+            checked[nums[i]] = i
+        
+        return []
         

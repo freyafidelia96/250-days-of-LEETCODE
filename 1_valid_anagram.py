@@ -44,3 +44,23 @@ def isAnagram(s: str, t: str) -> bool:
     return True
 
 """
+
+# Test cases
+if __name__ == "__main__":
+    solution = Solution()
+    
+    # Test 1: Valid anagram
+    print(solution.isAnagram("anagram", "nagaram"))  # Expected: True
+    
+    # Test 2: Not an anagram
+    print(solution.isAnagram("rat", "car"))  # Expected: False
+    
+    # Test 3: Different lengths
+    print(solution.isAnagram("a", "ab"))  # Expected: False
+    
+    # Test 4: Empty strings
+    print(solution.isAnagram("", ""))  # Expected: True
+    
+    for i in range(10):
+        print(i)
+    
