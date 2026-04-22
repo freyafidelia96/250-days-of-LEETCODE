@@ -45,6 +45,8 @@ class Solution:
             streak += 1
             curr += 1
             res = max(res, streak)
+        return res
+        
     
 
             
