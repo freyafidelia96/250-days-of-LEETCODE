@@ -20,7 +20,10 @@ class Solution:
         nums.sort()
         
         for i, a in enumerate(nums):
-            if i > 0 and a == nums[i - 1]:
+            if a > 0:           #early exit - sorted, can't sum to 0
+                break
+            
+            if i > 0 and a == nums[i - 1]:      #skip duplicate anchors
                 continue
 
             l, r = i + 1, len(nums) - 1
@@ -35,8 +38,11 @@ class Solution:
                 else:
                     res.append([a, nums[l], nums[r]])
                     l += 1
-                    while nums[l] == nums[l - 1] and l < r:
+                    r -= 1
+                    while l < r and nums[l] == nums[l - 1]:
                         l += 1
+                    while l < r and nums[r] == nums[r + 1]:
+                        r -= 1
             
         return res
 

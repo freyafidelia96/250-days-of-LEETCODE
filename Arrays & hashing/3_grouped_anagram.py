@@ -54,3 +54,15 @@ if __name__ == "__main__":
     #   res[tuple(count)].append(word)
     # print(list(res.values()))
     
+    
+    res = defaultdict(list)
+    
+    for word in ["eat", "tea", "tan", "ate", "nat", "bat"]:
+        count = [0] * 26
+        
+        for chr in word:
+            count[ord(chr) - ord('a')] += 1
+        
+        res[tuple(count)].append(word)
+    print(list(res.values()))
+    
